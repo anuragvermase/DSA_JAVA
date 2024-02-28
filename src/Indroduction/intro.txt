@@ -5,3 +5,4 @@ Rules of java:
 2. Java is case-sensitive language.
 3. Inside the parentheses we can do mathematics.
 4. use double quote to print as it is.
+5. concatenate different type with "+" while printing.
