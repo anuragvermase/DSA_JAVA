@@ -27,7 +27,7 @@ arr[3]=40;
 arr[4]=50;
 
 way 2 :
-int arr = {10,20,30,40,50};
+int[] arr = {10,20,30,40,50};
 sout(arr[3]) -> 40
 
 To get size of an array : arr.length;
