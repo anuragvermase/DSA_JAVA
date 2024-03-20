@@ -43,11 +43,11 @@ public class twoSum {
             for (int j = i+1; j < arr.length; j++) {
 
                 if(arr[i]+arr[j]==k){
-                    return true;
+                    return true; //if true it returns true
                 }
             }
         }
-      return false;
+      return false; //if not true then returns false
     }
 
 
