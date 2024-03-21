@@ -1,0 +1,6 @@
+Two – dimensional array is the simplest form of a multidimensional array. A two – dimensional array
+can be seen as an array of one – dimensional array for easier understanding.
+
+Syntax:
+
+int [][] arr = new  int[5][4];

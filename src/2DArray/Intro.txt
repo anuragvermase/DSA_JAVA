@@ -1,3 +1,0 @@
-Syntax
-
-int [][] arr = new int[5][4];
