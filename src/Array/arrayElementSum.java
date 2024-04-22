@@ -10,7 +10,7 @@ public class arrayElementSum {
         int N = sc.nextInt();
         int[] arr = new int[N];
 
-        // Input value
+        // Input value (user)
         for (int i = 0; i < N; i++) {
             arr[i]=sc.nextInt();
         }
