@@ -1,0 +1,62 @@
+String : Sequence/ combination of character.
+Character can be lowercase, uppercase, special characters etc.
+
+Characters :
+
+Alphabet
+A-Z (uppercase)
+a-z (lowercase)
+
+Special Characters
+# @ ? etc.
+
+Numbers
+"0"-"9"
+
+Character Define??
+
+char ch = 'A'   {Single Quote}
+
+computer understand binary numbers(0 or 1) so Numbers are converted into binary number by compiler:
+Numbers -> Binary numbers
+&
+character -> Numbers(ASCII value){which is predefined} -> binary number
+
+ASCII:
+'A' -> 65
+'B' -> 66
+.
+.
+'Z' -> 90
+
+'a' -> 97
+'b' -> 98
+.
+.
+'z' -> 122
+
+'0' -> 48
+'1' -> 49
+.
+.
+'9' -> 57
+
+*Character Rules:
+1. you can do any mathematical operation on character & the answer will be integer.
+  sop('A'+'B') -> o/p : 131
+
+TypeCast
+2. char to int : implicit
+  int x = 'c';
+
+3. int to char : Complicated {in few cases it will be implicit & in few it should be explicit}
+  so, do explicitly always
+  char ch = (char)65;
+
+
+
+
+
+String st = "Great Anurag";  {Double Quote}
+
+
