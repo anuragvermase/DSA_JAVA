@@ -15,7 +15,7 @@
 *
 * */
 
-package TwoDArray;
+package Leetcode.Array;
 
 import java.util.Scanner;
 
