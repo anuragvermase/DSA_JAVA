@@ -1,4 +1,3 @@
-String : Sequence/ combination of character.
 Character can be lowercase, uppercase, special characters etc.
 
 Characters :
@@ -55,8 +54,23 @@ TypeCast
 
 
 
+String : Sequence/ combination of character.
 
+String st = "GREAT";  {Double Quote}
+String st1 = "A"; {This also works}
 
-String st = "Great Anurag";  {Double Quote}
+indexing   : 0 1 2 3 4
+characters : G R E A T
 
+Sop(st.charAt(3));//3
+st.charAt(3)='E';// In string you can't change characters directly.(No update)
+strings are immutable
+
+Substring : Any continuous part of string
+
+eg: GRE ✔️
+    AT ✔️
+    EAT ✔️
+    GAT ❌
+    RAT ❌
 

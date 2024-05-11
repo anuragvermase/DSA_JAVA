@@ -35,7 +35,32 @@ public class stringInput {
         //*In this case it will be explicit
         char ch4 = 'A';
         ch4 = (char)(ch4 +3); //Explicitly 68 converted to char
-        System.out.println(ch4);
+        System.out.println(ch4); //D
+
+        //SUBSTRING : continuous part of string
+
+        String subst = "GREAT";
+        /*
+        substring(sp,ep): sp-> inclusive ep->exclusive
+        */
+        System.out.println(subst.substring(2,5)); //EAT
+
+        //Length of string
+        System.out.println(subst.length()); //5
+
+        //String to character Array
+        char[] nums = subst.toCharArray();
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i]+" ");  //G R E A T
+        }
+
+        System.out.println();
+
+        //Character Array to String
+        String str = "".valueOf(nums);
+        System.out.println(str); //GREAT
+
+
 
 
 
