@@ -59,15 +59,6 @@ public class stringInput {
         //Character Array to String
         String str = "".valueOf(nums);
         System.out.println(str); //GREAT
-
-
-
-
-
-
-
-
-
-
+        
     }
 }
