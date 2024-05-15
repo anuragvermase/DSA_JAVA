@@ -1,0 +1,32 @@
+Quiz: How many numbers  are in range [3,10] {corners included}
+{3 4 5 6 7 8 9 10} - 8 numbers
+
+[a,b] -> (b-a)+1 numbers
+[a,b) -> (b-1)   numbers
+(a,b) -> (b-a)-1 numbers {exclusive}
+
+
+x^2 =10  =>  2=logx(10)         (log base x)
+
+(logb)a = ans => a=b^ans       (log base b)
+{b की कितनी पावर ली जाए की a निकल जाए}
+
+(log2)10 = ans => 10 = 2^ans   (log base 2)
+{ans की कितनी पावर ली जाए की 10 निकल जाए}
+ans=2.333...
+
+(log2)64 =ans => 64=2^ans
+ans = 6
+
+(log2)32 = ans => 32 =>2^ans
+ans = 5
+
+(log2)33 = ans = 33 = 2^ans
+ans = 5.***
+
+PROPERTIES:
+1. (loga)a^ n = n                    (log base a)
+eg. (log5)5^10 = 10                  (log base 5)
+
+2. (logc)(a*b) = (logc)a + (logc)b   (log base c)
+eg. (log2)10 = (log2)2 + (log2)5     (log base 2)
