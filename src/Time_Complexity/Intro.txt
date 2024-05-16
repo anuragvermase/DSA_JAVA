@@ -5,6 +5,7 @@ Quiz: How many numbers  are in range [3,10] {corners included}
 [a,b) -> (b-1)   numbers
 (a,b) -> (b-a)-1 numbers {exclusive}
 
+--------------------------------------------------
 
 x^2 =10  =>  2=logx(10)         (log base x)
 
@@ -23,10 +24,264 @@ ans = 5
 
 (log2)33 = ans = 33 = 2^ans
 ans = 5.***
-
+--------------------------------------------------
 PROPERTIES:
-1. (loga)a^ n = n                    (log base a)
+1. (loga)a^n = n                    (log base a)
 eg. (log5)5^10 = 10                  (log base 5)
 
 2. (logc)(a*b) = (logc)a + (logc)b   (log base c)
 eg. (log2)10 = (log2)2 + (log2)5     (log base 2)
+
+--------------------------------------------------
+
+Quiz: No. of steps for N-> N/2-> N/4-> ...... 1.
+
+((N*1/2)*1/2)*1/2 . . . )=1
+
+N/2^count = 1
+
+N = 2^count
+(log2)N = count                      (log base 2)
+
+--------------------------------------------------
+Arithmetic Progression (A.P.):
+
+AP series : 3 7 11 15 19 23 27 . . .
+=> common difference = d = +4 = difference b/w consecutive no.s
+=> first term = a = starting number
+
+1    2     3      4                 N
+a (a+d) (a+2d) (a+3d) . . . . . [a+(N-1)d]
+
+Sum of First N terms : N/2[2a + (N-1)d]
+
+---------------------------------------------------
+Geometric Progression (G.P.)
+
+GP series : 3 6 12 24 48 96 . . .
+
+GP series : 50 25 12.5 6.25 . . .
+
+first term = a = starting number
+common ratio = r = multiple to get next number
+
+a ar ar^2 ar^3 . . . . . ar^(N-1)
+
+Sum of N terms in GP = a*[(r^N-1)/(r-1)]
+
+---------------------------------------------------
+Quiz : How many times loop runs
+
+int Sum = 0;
+for (int i = 1; i<=N; i++){
+Sum=Sum+1;
+}
+
+Ans: [1,N]
+     N times
+     Big O notation : O(N)
+
+-----------------------------------------------------
+Quiz :
+
+void func( int N , int M ){
+   for(int i = 1; i<=N; i++){
+     print(i);
+   }
+   for(int i = 1; i<=M; i++){
+     Print(i);
+   }
+}
+
+Ans: [1,N]
+     [1,M]
+
+     (N+M) times
+     Big O notation : O(N+M)
+
+----------------------------------------------------
+Quiz:
+
+int func(int N){
+   int S=0;
+   for(int i=0; i<=100; i++){
+     S=S+i^2;
+   }
+   return S;
+}
+
+Ans: [0,100]
+     101 times
+     Big O notation : O(1)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i*i<=N; i++){
+     S=S+i^2;
+   }
+   return S;
+}
+
+Ans: [1,sqrt(N)]
+     sqrt(N) times
+     Big O notation : O(sqrt(N))
+
+---------------------------------------------------
+Quiz:
+
+void func(int N ){
+   int i=N;
+   while(i>=1){
+     i=i/2;
+   }
+}
+
+Ans: N->N/2->N/4 . . . 1.
+     (log N) times
+     Big O notation : O(log N)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=0; i<=N; i=i*2){
+     S=S+i;
+   }
+}
+
+Ans: i=i*2 gives always 0, and less than N {i<=N}
+     Infinite times
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i<=N; i=i*2){
+     S=S+i;
+   }
+}
+
+Ans: i = 1->2->4->8.... N/4->N/2->N.
+     log N times
+     Big O notation : O(log N)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i<=10; i++){
+       for(int j=1; j<=N; j++){
+           S=S+10;
+         }
+   }
+}
+
+Ans: loop i : [1,10]
+     loop j : [1,N]
+     10(N) times
+     Big O notation : O(N)
+
+--------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i<=N; i++){
+       for(int j=1; j<=N; j++){
+           S=S+10;
+         }
+   }
+}
+
+Ans: loop i : [1,N]
+     loop j : [1,N]
+     N^2 times
+     Big O notation : O(N^2)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i<=N; i++){
+       for(int j=1; j<=i; j++){
+           S=S+10;
+         }
+   }
+}
+
+Ans: i loop : [1,N]
+     j loop : [1,i]
+     [N*(N+1)]/2 times
+     Big O notation : O(N^2)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   for(int i=1; i<=2^N; i++){
+     print(i);
+   }
+}
+
+Ans: [1,2^n]
+     2^N times
+     Big O notation : O(2^N)
+
+---------------------------------------------------
+Quiz:
+
+void func(int N){
+   int S=0;
+   for(int i=1; i<=N; i++){
+       for(int j=1; j<=2^i; j++){
+           S=S+10;
+         }
+   }
+}
+
+Ans: i loop : [1,N]
+     j loop : [1,2^i]
+
+     GP series : 2^1 +2^2 +2^3 +2^4 . . . +2^N.
+     r=2
+     a=2
+     a*[(r^N-1)/(r-1)]
+     2*[(2^N-1)/(2-1)]
+     2*(2^N-1) times
+
+     2*2^N -2
+     Big O notation : O(2^N)
+
+---------------------------------------------------
+
+Comparison of iteration:
+
+1<logN<sqrt(N)<N<NlogN<Nsqrt(N)<N^2<N^N . . .
+{takes Right most side values}
+
+Time complexity
+-> Big O Notation -> Approx iteration
+
+eg: 20N^2 + 20N + 30.
+
+steps to follow:
+1. calculate iteration
+    20N^2 + 20N^1 + 30N^0
+2. neglect lower order terms
+    20N^2
+3. neglect constants
+    N^2
+=>Big O Notation = O(N^2)
+
+eg: 4N + 3NlogN + 100
+ -> O(NlogN)
+
+eg: 10NlogN + 15sqrt(N) + 1000
+ -> O(NlogN)
