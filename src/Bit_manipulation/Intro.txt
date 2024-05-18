@@ -168,5 +168,49 @@ Properties:
 -> N&0=0
 -> N|N=N
 -> N|0=N
--> N^N=N
--> N^0=0
+-> N^N=0
+-> N^0=N
+
+Ques : Given an array arr[N], every element appears twice except for one element which appers once, find that unique element.
+Eg: arr[7] : {6 8 8 7 7 10 6} -> 10
+    arr[5] : {2 2 1 9 9} -> 1
+
+Idea : Take xor of all array elements.
+    arr[7] : {6 8 8 7 7 10 6}
+    shuffle array
+    {6^6^7^7^8^8^10}
+    {0^10} => 10    {as N^0=N}
+
+//Pseudo code
+
+int ans=0;
+for(int i=0; i<n; i++){
+   ans = ans^arr[i];
+}
+sop(ans);
+
+_______________________________________________________
+
+-> left shift(<<)
+
+a=45 :     1 0 1 1 0 1  ->45
+a<<1 :   1 0 1 1 0 1 0  ->90 {left shift by 1 index and add 0 to right}
+a<<2 : 1 0 1 1 0 1 0 0  ->180
+
+Note: *2 with every leftshift(<<)
+a<<N = a*(2^N)
+
+Quiz: a==1
+      1<<N = 1*2^N = 2^N
+
+      -> for 2^N, you need to use left shift operator.
+
+->right shift(>>):
+
+a=10 :  0 1 0 1 0   ->10    {last bit removed}
+a>>1 :  0 0 1 0 1   ->5     {move one index right }
+a>>2 :  0 0 0 1 0   ->2
+
+a>>N : a/(2^N)
+
+
