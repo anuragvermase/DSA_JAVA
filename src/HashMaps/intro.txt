@@ -1,0 +1,34 @@
+HashMaps : HashMap in Java stores the data in (Key, Value) pairs, and you can access them by an index of another type (e.g. an Integer).
+One object is used as a key (index) to another object (value). If you try to insert the duplicate key in HashMap, it will replace
+the element of the corresponding key.
+
+(Key, Value) pair
+
+=> Store population of every country:
+   Key : Country name : String
+   value : population : int/long
+
+=> Store all the school with their principal name.
+   Key : String
+   value : String
+____________________________________________________________
+Facts :
+1. Keys can be only of following data type:
+
+           wrapper class
+
+boolean -> Boolean
+int     -> Integer
+long    -> Long
+char    -> Character
+double  -> Double
+String  -> String
+
+Not application : arrays, objects.
+
+2. Values can be of any type
+___________________________________________________________
+
+Syntax:
+            key     value    name
+=> HashMap <Integer,Integer> hm   = new HashMap<>();
