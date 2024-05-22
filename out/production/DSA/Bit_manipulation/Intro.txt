@@ -1,0 +1,216 @@
+Decimal number system :
+{0 to 9} digits
+
+Binary number system :
+{0 and 1} digit
+
+0 : unset bit or off bit
+1 : set bit or on bit
+__________________________________________________________
+Conversion:
+-> convert decimal numbers to binary
+
+Ques : convert 30 decimal to binary ->
+
+Divide 30 by 2 and note down all the remainder
+
+          remainder
+  2 | 30 ->0
+  2 | 15 ->1
+  2 | 7  ->1
+  2 | 3  ->1
+  2 | 1  ->1
+    | 0
+
+ =>and write down all the remainder from bottom to up
+
+  30-> 11110
+__________________________________________________________
+Ques : Convert (10101)₂ -> ()₁₀
+
+bit index     :   4 3 2 1 0
+binary number : ( 1 0 1 0 1 )₂
+
+-> no. * 2^(bit index)
+
+=> 1*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 1*2^0 = 21
+
+Ques : (102010)₂ -> Invalid Input.
+
+__________________________________________________________
+
+Add binary numbers :
+
+   0 1 0 1 1 1               1 + 0 = 1
+   0 1 1 1 1 0               1 + 1 = 1 0       1 carry
+   ___________               1 + 1 + 1 = 1 1   1 carry
+   1 1 0 1 0 1               0 + 0 = 0
+
+_________________________________________________________
+
+Bitwise Operator :
+{and, or, xor, leftshift, rightshift}
+
+A  B     A&B   A|B   A^B
+0  0      0     0     0
+0  1      0     1     1
+1  0      0     1     1
+1  1      1     1     0
+
+&& -> relational operator {to combine multiple conditions }
+&  -> bitwise operator
+
+Ques : 23 & 10
+
+23 : 1 0 1 1 1
+10 : 0 1 0 1 0
+_______________
+     0 0 0 1 0     -> 2 Ans.
+
+
+Ques : 20 & 10
+
+20 : 1 0 1 0 0
+10 : 0 1 0 1 0
+_______________
+     0 0 0 0 0     -> 0 Ans.
+
+
+Ques : 23 | 10
+
+23 : 1 0 1 1 1
+10 : 0 1 0 1 0
+_______________
+     1 1 1 1 1     -> 31 Ans.
+
+
+Ques : 20 | 10
+
+20 : 1 0 1 0 0
+10 : 0 1 0 1 0
+_______________
+     1 1 1 1 0     -> 30 Ans.
+
+
+Ques : 23 ^ 10
+
+23 : 1 0 1 1 1
+10 : 0 1 0 1 0
+_______________
+     1 1 1 0 1     -> 29 Ans.
+
+
+Ques : 20 ^ 15
+
+20 : 1 0 1 0 0
+15 : 0 1 1 1 1
+_______________
+     1 1 0 1 1     -> 27 Ans.
+
+________________________________________________________________
+
+N=10 : 1 0 1 0
+
+N=11 : 1 0 1 1
+
+N=12 : 1 1 0 0
+
+N=13 : 1 1 0 1
+
+Observation : 1. Rightmost bit for even number is 0.
+              2. Leftmost bit for odd number is 1.
+
+Ques : You have been given a positive number, identify whether the number is even or odd
+Eg: N=8 -> even
+    N=9 => odd
+Note: use of *,-,+,/ are not allowed.
+
+=> To check rightmost bit is 0 or 1 use bitwise and(&) operator with 1
+
+N=10 : 1 0 1 0
+   1 : 0 0 0 1
+   ____________
+       0 0 0 0    -> 0 (even)
+
+N=11 : 1 0 1 1
+   1 : 0 0 0 1
+   ____________
+       0 0 0 1    -> 1 (odd)
+
+
+So N & 1 : if 0 -> even
+           if 1 -> odd
+
+pseudo code:
+
+if(N&1==0){
+  sop("even");
+}else{
+  sop("odd")
+}
+
+________________________________________________________________
+
+Properties:
+
+1. commutative Property
+  a&b = b&a
+  a|b = b|a
+  a^b = b^a
+
+2. Associative Property
+  a&b&c = (a&b)&c = a&(b&c)
+  a|b|c = (a|b)|c = a|(b|c)
+  a^b^c = (a^b)^c = a^(b^c)
+
+
+-> N&N=N
+-> N&0=0
+-> N|N=N
+-> N|0=N
+-> N^N=0
+-> N^0=N
+
+Ques : Given an array arr[N], every element appears twice except for one element which appers once, find that unique element.
+Eg: arr[7] : {6 8 8 7 7 10 6} -> 10
+    arr[5] : {2 2 1 9 9} -> 1
+
+Idea : Take xor of all array elements.
+    arr[7] : {6 8 8 7 7 10 6}
+    shuffle array
+    {6^6^7^7^8^8^10}
+    {0^10} => 10    {as N^0=N}
+
+//Pseudo code
+
+int ans=0;
+for(int i=0; i<n; i++){
+   ans = ans^arr[i];
+}
+sop(ans);
+
+_______________________________________________________
+
+-> left shift(<<)
+
+a=45 :     1 0 1 1 0 1  ->45
+a<<1 :   1 0 1 1 0 1 0  ->90 {left shift by 1 index and add 0 to right}
+a<<2 : 1 0 1 1 0 1 0 0  ->180
+
+Note: *2 with every leftshift(<<)
+a<<N = a*(2^N)
+
+Quiz: a==1
+      1<<N = 1*2^N = 2^N
+
+      -> for 2^N, you need to use left shift operator.
+
+->right shift(>>):
+
+a=10 :  0 1 0 1 0   ->10    {last bit removed}
+a>>1 :  0 0 1 0 1   ->5     {move one index right }
+a>>2 :  0 0 0 1 0   ->2
+
+a>>N : a/(2^N)
+
+
