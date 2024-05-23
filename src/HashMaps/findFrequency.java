@@ -14,13 +14,14 @@ import java.util.Scanner;
 public class findFrequency {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
         System.out.println("Enter size of array");
-        int[] arr = new int[n];
+        int n = sc.nextInt();
         System.out.println("Enter size of Query");
+        int m = sc.nextInt();
 
+        int[] arr = new int[n];
         int[] qy = new int[m];
+
         System.out.println("Enter array");
 
         for (int i=0; i<n; i++){
@@ -36,6 +37,25 @@ public class findFrequency {
 
     }
     public static void findFreq(int[] arr,int[] qy){
+
+
+    /*IDEA : 1
+
+        for (int i = 0; i < qy.length; i++) {
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) {
+
+                if (qy[i]==arr[j]){
+                    count++;
+                }
+            }
+            System.out.println(count);
+        }
+
+        */
+
+    //IDEA : 2
+
         HashMap<Integer,Integer> hm = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if(!hm.containsKey(arr[i])){
@@ -54,5 +74,17 @@ public class findFrequency {
                 System.out.println("0");
             }
         }
+
     }
 }
+
+/*
+Compare : Time Complexity
+Idea : 1 -> O(n*m)
+Idea : 2 -> O(n+m)
+if we consider n=m :
+Idea : 1 ->          O(n^2)
+Idea : 2 -> O(2n) =  O(n)
+
+Idea 2 complexity is better
+ */

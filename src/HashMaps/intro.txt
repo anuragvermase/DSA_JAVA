@@ -62,14 +62,43 @@ Time complexity : O(1)
 hm.remove(10); -> it will remove(10,50)
 T.C. ->O(1)
 
+//Size
+hm.size() -> give no of keys
+
 //Iterate on HashMap
+
  //print key
  for (int key: hm.keySet()) {
  System.out.println(key);
  }
+
  //print value
  for (int value: hm.values()) {
  System.out.println(value);
  }
+
+___________________________________________________________
+
+HashSet
+-> Only the key part of HashMap
+
+HashSet<Integer> hs = new HashSet<>(); (random order)
+
+//add
+hs.add(10); -> add
+hs.add(20); -> add
+hs.add(10); -> Nothing(replace previous 10)
+
+//remove
+hs.remove(10); -> removes 10
+
+//contains
+hs.contains(20); -> true
+hs.contains(10); -> false
+
+//size
+hs.size(); -> 1
+
+
 
 
