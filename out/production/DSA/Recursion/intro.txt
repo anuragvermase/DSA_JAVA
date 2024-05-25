@@ -1,0 +1,9 @@
+Why, Where recursion ???
+->Tree
+->Backtracking
+->DP      : Amazon
+->Graph   : Google
+
+Recursion : Function calling itself
+
+
