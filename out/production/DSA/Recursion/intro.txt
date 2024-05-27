@@ -6,4 +6,40 @@ Why, Where recursion ???
 
 Recursion : Function calling itself
 
+Thought Process:
+Sum(N) = 1+2+3+4+......+(N-1)+N.
+Sum(N) = Sum(N-1)+N.
+
+Sum(N-1) = 1+2+3+4+......+(N-2)+(N-1).
+Sum(N-1) = Sum(N-2)+(N-1).
+
+Sum(N-2) = 1+2+3+4+......+(N-3)+(N-2).
+Sum(N-2) = Sum(N-3)+(N-2).
+.
+.
+.
+Sum(1) = 1
+
+Ques : Given N , Find Sum of nos. form(1....N)
+
+Three magical steps of recursion:
+1.Faith: What your function should do and have faith that the function works
+
+2.Main logic: Solving your Problem with sub-problem {smaller instance of same program}.
+
+3.Base condition: Solution to smallest sub-problem.
+
+// Function
+int Sum(int N ){     ->Faith: Given N, calculate & return Sum of N numbers.
+
+if(N==1){            ->Base case : Sum(1)=1
+return 1;
+}
+
+int temp = Sum(N-1); ->Main Logic: Sum(N) = Sum(N-1)+N
+return temp+N;
+
+}
+
+
 
