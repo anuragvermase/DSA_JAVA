@@ -41,5 +41,10 @@ return temp+N;
 
 }
 
+_____________________________________________________________________
 
+Recursion 2nd Part
 
+Time Complexity of Recursive Code :
+overall time complexity : (Time complexity of 1 function) * (Total number of function)
+                          {time complexity of one function = O(1) }

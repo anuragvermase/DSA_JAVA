@@ -18,3 +18,5 @@ public class printIncreasing {
         System.out.println(N);
     }
 }
+
+//    Time Complexity = O(1) * N = O(N)

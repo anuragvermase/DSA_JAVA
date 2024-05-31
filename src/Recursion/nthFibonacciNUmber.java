@@ -25,3 +25,10 @@ public class nthFibonacciNUmber {
     }
 }
 
+//    Time Complexity = O(1) * 2^N = O(2^N)        {here 2 function calls}
+
+/*
+* Number of calls = x
+* count of levels = n
+* number of function = x^n
+* */

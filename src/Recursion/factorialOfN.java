@@ -14,3 +14,5 @@ public class factorialOfN {
         return temp*N;
     }
 }
+
+// Time Complexity = O(1) * N = O(N)
