@@ -16,3 +16,4 @@ public class SumOfN {
 }
 
 //Time Complexity = O(1) * N = O(N)
+//Space Complexity = O(N)
