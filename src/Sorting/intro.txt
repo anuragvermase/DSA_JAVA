@@ -1,0 +1,31 @@
+Sorting : Arranging data in increasing or decreasing order.
+
+Ex:2 4 10 15 27 -> True (Increasing)
+Ex:20 7 3 -5 -8 -> True (Decreasing)
+
+Ex:     1 2 3 7 4 9 6 -> Not sorted on the basis of value
+factor: 1 2 2 2 3 3 4 -> Sorted on the basis of factor count
+
+Techniques of sorting :
+bubble sort
+selection sort
+insertion sort
+merge sort
+quick sort
+bucket sort
+radix sort
+etc..
+
+If a problem have many steps and one of its step is sorting, then
+
+Steps to solve Problem:
+1.   2.   3.   4.
+
+** if the first (1) step is the sorting step then we cannot use sorting techniques,
+we use Inbuilt sorting function to sort the array.
+
+i.e. Arrays.sort(arr); -> this function sort the array in increasing order
+
+T.C : O(NlogN)        S.C. : O(N)
+worst T.C. : O(N²)
+
