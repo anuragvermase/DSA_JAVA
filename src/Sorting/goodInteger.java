@@ -1,5 +1,5 @@
 /*
-* Good Integer :
+* Good Integer : {Only distinct}
 * Given arr[N], calculate no. of good integers. An element is said to be good if
 * {No. of element < ele == ele itself}
 *
@@ -32,3 +32,6 @@ public class goodInteger {
         return count;
     }
 }
+
+//T.C. : O(NlogN+N) = O(NlogN)
+//S.P. : O(N)
