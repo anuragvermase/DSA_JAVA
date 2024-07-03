@@ -29,3 +29,11 @@ i.e. Arrays.sort(arr); -> this function sort the arr ay in increasing order
 T.C : O(NlogN)        S.C. : O(N)
 worst T.C. : O(N²)
 
+SORTING TECHNIQUES:
+BUBBLE SORT: sort the array in asc. order but we can swap adjacent element only.
+
+arr[8]: {5 7 5 4 10 -2 6 3 }
+//we need to put greater (10) element at the end.
+arr[8]: {5 7 5 4 -2 6 3 10}
+
+

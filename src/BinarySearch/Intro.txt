@@ -1,0 +1,46 @@
+Story: Police searches culprit
+
+Police - must have knowledge of these two
+1. Face/Photo : Whom to search {Target}
+2. Location : Where to Search {Search space}
+
+Eg:
+{Whom to search}            {where to search}
+word(AlgoPrep)              {newspaper/book/dictionary}   : we prefer dictionary
+contact number (HP)         {LinkedIn/telephone directory}   : we prefer telephone directory
+
+-> Search space is ordered, searching become easier
+
+Linear Search : Searching one by one
+
+Binary Search : Divide your search space in 2 parts, if we can discard one half, we can apply BS.
+-> Array should not necessarily be sorted.
+
+IDEA behind searching:
+
+Idea 1 : Linear search
+T.C. : O(N)
+S.P. : O(1)
+
+Idea 2 : Binary search
+search space : given array
+target : K (given : whom to search)
+
+case 1:
+mid = (lo+hi)/2
+if(arr[mid]==K){
+return true;
+}
+
+case 2:
+mid = (lo+hi)/2
+if(arr[mid]<K){
+//discard left side & search in right
+}
+
+case 3:
+mid = (lo+hi)/2
+if(arr[mid]>K){
+//discard right side & search in left
+}
+
