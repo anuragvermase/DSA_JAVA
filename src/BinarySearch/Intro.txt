@@ -15,7 +15,7 @@ Linear Search : Searching one by one
 
 Binary Search : Divide your search space in 2 parts, if we can discard one half, we can apply BS.
 -> Array should not necessarily be sorted.
-
+_________________________________________________________________
 IDEA behind searching:
 
 Idea 1 : Linear search
@@ -43,5 +43,31 @@ mid = (lo+hi)/2
 if(arr[mid]>K){
 //discard right side & search in left
 }
+_______________________________________________________________
+Mid-Calculation :
 
+mid=(hi+lo)/2
 
+Another way:
+
+mid = lo + (hi-lo)/2
+
+**** use this method instead of above method.
+_______________________________________________________________
+eg :
+hi -> integer
+lo -> integer
+integer range : -2^32 to 2^32-1
+
+therefore if we use :
+mid=(hi+lo)/2
+let lo -> 1
+    hi -> 2^32-1
+
+mid =(1+ 2^32-1)/2   {at (1+ 2^32-1) this stage it exceeding the integer range }
+
+so we use:
+mid = lo + (hi-lo)/2
+mid = 1 + (2^32-1 -1)/2 {not exceeding the integer range at any point}
+
+SO,IT PREVENTS OVERFLOW.
