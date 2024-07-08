@@ -1,0 +1,72 @@
+Classes and Objects :
+
+Classes: To combine different data types and data structures.
+Need of creating classes:
+When we are creating custom data types.
+
+Creating Class:
+
+public static class Pair{
+int x;
+int y;
+}
+
+Creating object:
+
+Pair p1 = new Pair();
+Pair p2 = new Pair();
+Pair p3 = new Pair();
+
+p1,p2,p3: are independent.
+all have there x and y.
+
+let, System.out.println(p2.y); //0 {default value of integer is zero(0)}
+p2.y=50;
+System.out.println(p2.y); //50
+_____________________________________________________________________________
+Class: It is a blueprint.
+Object: real instance of blueprint
+
+
+BLUEPRINT           Shazzy :                      Chandra :
+class home{         home Shazzy = new home()      home chandra = new home()
+int roomCount;      shazzy.roomCount=4            chandra.roomCount=3
+int floorCount;     shazzy.floorCount=2           chandra.floorCount=4
+int area;           shazzy.area = 500             chandra.area = 600
+String color;       shazzy.color = "blue"         chandra.color = "yellow"
+boolean pool;       shazzy.pool = true            chandra.pool = false
+}
+
+________________________________________________________________________________________
+
+Constructor: to make your life easy
+
+without constructor:
+public static class Pair{
+int x;
+int y;
+}
+
+if we want to assign values to x & y:
+Pair p1 =new Pair();
+p1.x = 20;
+p1.y = 20;
+
+with constructor:
+public static class Pair{
+int x;
+int y;
+
+Pair(v1,v2){     //constructor {we can create multiple constructor}
+x=v1
+y=v2
+}
+
+}
+
+if we want to assign values to x & y:
+Pair p1 =new Pair(20,20);  //not write extra line of code to assign values
+
+
+
+
