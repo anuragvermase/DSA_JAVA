@@ -15,6 +15,7 @@ public class classesNObjects {
         System.out.println(p4.y); //0
 
     }
+    //creating class
     public static class Great{
         int x;
         int y;
