@@ -51,6 +51,7 @@ if we want to assign values to x & y:
 Pair p1 =new Pair();
 p1.x = 20;
 p1.y = 20;
+________________________________________
 
 with constructor:
 public static class Pair{
