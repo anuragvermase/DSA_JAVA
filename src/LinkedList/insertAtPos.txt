@@ -1,0 +1,32 @@
+Ques: Insert in a linked list.
+insert at index : k=3, (val=60).
+{insert after 3 node}
+
+  head
+ val =10          val =20           val =30             val=40              val=50
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5
+
+ CODE:
+ void insertAtPos(Node head, int val,int k){
+ //creating instance/object
+ Node n1 = new Node(val);
+ int temp = head;
+ //jump k-1, because we are already at head position.
+ for(int i = 1; temp<=k-1;i++){
+ temp=temp.next;
+ }
+ tempP1 = temp.next; //tempP1 have reference of temp+1 node
+ temp.next = n1;
+ n1.next = tempP1;
+ }
+
+ // after adding
+
+   head                              temp                                  tempP1
+  val =10          val =20           val =30            val = 60           val=40              val=50
+  next=#ref2   ->  next=#ref3   ->   next=n1    ->   next=tempP1  ->    next=#ref5    ->    next=null
+
+  #ref1            #ref2             #ref3              #ref0 (n1)         #ref4               #ref5
+
