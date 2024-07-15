@@ -1,0 +1,23 @@
+Ques: Delete in link list.
+-> delete head
+
+  head
+ val =10          val =20           val =30             val=40              val=50
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5
+
+ CODE :
+
+ head = head.next;
+
+ // JAVA has garbage collector which automatically delete variable or anything which is not accessible.
+ // When head moves to #ref2 (head.next) then #ref1 not accessible.
+
+ Output:
+
+   head
+ val =20           val =30             val=40              val=50
+ next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref2             #ref3               #ref4               #ref5
