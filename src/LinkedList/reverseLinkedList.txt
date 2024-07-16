@@ -1,0 +1,41 @@
+Ques: Reverse a LinkedList.
+
+
+           head
+          val =10          val =20           val =30             val=40              val=50
+null ->   next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null  -> null
+
+          #ref1            #ref2             #ref3               #ref4               #ref5
+prev      curr             currP1
+
+
+ reverseLinkedList(Node head){
+ Node curr = head;
+ Node prev = null;
+
+ while(curr!= null){              //or prev.next!=null  (exit condition)
+ Node  currP1 = curr.next;
+ curr.next = prev;
+
+ prev = curr;
+ curr = currP1;
+ }
+
+ head = prev;
+
+ }
+
+TC : O(N)
+SC : O(1)
+
+Output :
+
+
+                                                                                     head
+          val =10          val =20           val =30             val=40              val=50
+null <-  next=null   <-    next=#ref1   <-   next=#ref2    <-    next=#ref3    <-    next=#ref4  -> null
+
+          #ref1            #ref2             #ref3               #ref4               #ref5
+                                                                                     prev           curr & currP1
+
+

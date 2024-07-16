@@ -1,0 +1,78 @@
+Ques : Given head of a LinkedList, find the mid of it.
+
+
+ODD: ans=30
+  head
+ val =10          val =20           val =30             val=40              val=50
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5
+
+
+ EVEN : ans = 30 or 40
+   head
+  val =10          val =20           val =30             val=40              val=50              val=60
+  next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=#ref6     ->   next=null
+
+  #ref1            #ref2             #ref3               #ref4               #ref5               #ref6
+
+IDEA 1 : Iterate out and find the size of linked list and then in second iteration return (size/2)th element/Node
+TC : O(N)
+SC : O(1)
+
+IDEA 2 : Do it in single iteration.
+Let's have a race of 1Km (1000m).
+        Boy1         Boy2
+takes:  x step       2x step    in 1 sec.
+at end: 500m (mid)   1000m (reaches at finish line)
+
+So, we take two variable/pointer s and f {s: slow, f: fast}
+At start s and f are at head Node, then
+s : takes 1 step while f : takes 2 steps.
+
+
+ODD: ans=30
+  head
+ val =10          val =20           val =30             val=40              val=50
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5
+                                    s                                       f
+
+ Observation : When f.next == null  -> exit and, s is our answer.
+
+
+ EVEN : ans = 30 or 40
+   head
+  val =10          val =20           val =30             val=40              val=50              val=60
+  next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=#ref6     ->   next=null
+
+  #ref1            #ref2             #ref3               #ref4               #ref5               #ref6
+                                     s                                        f
+
+  Observation : When f.next.next == null  -> exit and, s is our answer.
+
+***Q : But the problem is how we know that the linked list is even or odd.
+
+**no need to worry about That the linkedList is odd or even.
+f.next == null (for ODD)
+f.next.next == null (for EVEN)
+Both are not interrelated of each other.
+we use AND (&&) operator,
+if the linked list is odd then f.next==null condition satisfied and exits the loop, not need to go on
+f.next.next==null condition.,
+
+
+
+CODE :
+
+Node mid(){
+Node s = head;
+Node f = head;
+
+while(f.next!=null && f.next.next!=null){
+s = s.next;
+f = f.next.next;
+}
+return s;
+}
