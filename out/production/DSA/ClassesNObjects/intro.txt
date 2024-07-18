@@ -68,6 +68,86 @@ y=v2
 if we want to assign values to x & y:
 Pair p1 =new Pair(20,20);  //not write extra line of code to assign values
 
+____________________________________________________________________________________
 
+Nested Class:
 
+let int x = "Great";
+Pair p1 = 10;                   //Pair is a Class
+{So, while assigning , type should bhi same}
 
+**nested class**
+-----------------
+class Node{
+int val;
+Node next;
+
+Node (int v1){
+val = v1
+}
+}
+
+objects:
+
+Node n1 = new Node(10);
+i.e
+________________
+n1:
+int val = 10;
+Node next = null;
+________________
+
+Node n2 = new Node(20);
+i.e
+________________
+n2:
+int val = 20;
+Node next = null;
+________________
+
+NOW,
+n1.next = n2
+it means, n1's next becomes n2
+________________
+n1:
+int val = 10;
+Node next = n2;
+________________
+print(n1.next.val) //20 {we can access n2's value through n1}
+
+creating 3rd object
+Node n3 = new Node(30);
+i.e
+________________
+n3:
+int val = 30;
+Node next = null;
+________________
+
+print(n2.val) //20
+print(n2.next.next) //null {n2.next means next of n2, n2.next.next means next of n3}
+print(n1.next.next.val) //30 {val of n3}
+print(n1.next) // reference of n2
+_______________________
+Node n0 = new Node();
+when we created a variable(n0) with new keyword computer assign a name to that variable also,
+let it be reference(#ref0) {random values or hashcode}
+user's given name :n0
+computer given name :#ref0
+so, follow this condition n1, n2, n3 have their reference value let it be :#ref1, #ref2, #ref3.
+
+________________________________________________________________________________________________
+NOW,
+
+ head
+val =10          val =20           val =30             val=40              val=50
+next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+#ref1            #ref2             #ref3               #ref4               #ref5
+
+print (head.val) -> 10
+print (head.next.val) -> 20
+print (head.next.next.next) -> #ref4
+
+this is noting but Linked list : A Nested Class whose many occurrences connected to each other and
+we know the name of first occurrence.

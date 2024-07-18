@@ -1,3 +1,12 @@
+/*
+* Find the max of an array element
+*
+* Read an array of N length and print the max of all element
+*
+* eg : arr[4] : 10 -1  3  -7
+* o/p : 10
+* */
+
 package Array;
 
 import java.util.Scanner;

@@ -10,12 +10,13 @@ int[3] = 10;
 
 sout(arr[3]); ->10
 
-sout(arr[5]); ->Error(Index out of bound)
+sout(arr[5]); ->Error(Index out of bound)  {size is 5, and we want 6th element}
 
 If array is of length N.
 Then, 1st index = 0
 last index = N-1
 
+__________________________________________________________________________________________
 Ques -> Create an array of length 5 with values 10 20 30 40 50
 
 way 1 :

@@ -10,6 +10,7 @@ public class arrayInput {
         int n = sc.nextInt();  //size of the array
         int[] arr = new int[n];  //define an array
 
+        // array input
         for (int i = 0; i < n; i++) {
             arr[i]=sc.nextInt();
         }

@@ -1,7 +1,6 @@
 /* Rotate the array : Given N elements, rotate array from last to first by K times.
 *
 * rotation means:
-*
 * arr[5]: 1 2 3 4 5
 *
 * after the first rotation : 5 1 2 3 4
@@ -14,14 +13,14 @@
 *
 * OBSERVATION : You will get same array if you do rotation in multiples of arr.length.
 *
+* n : array length , k : rotation
 * n    k
 * 5    45   -> same array we get
 * 5    50   -> same array we get
 * 5    52   -> 2 rotations  (k % n)
 *
-* if k > n
-*
-* k=k%n  --> this much rotations  you have to do.
+* (if k > n):
+*  k=k%n  --> this much rotations  you have to do.
 *
 * */
 
@@ -53,7 +52,6 @@ public class arrayRotate {
         }
 
     }
-
     public static void reverse(int[] arr , int s , int e) {
         int sp = s;
         int ep = e;
@@ -66,7 +64,6 @@ public class arrayRotate {
 
             sp++;
             ep--;
-
         }
     }
 }

@@ -1,0 +1,21 @@
+/*
+* given head of the linkedlist (LL) print the elements.
+*
+*  head
+* val =10          val =20           val =30             val=40              val=50
+* next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+* #ref1            #ref2             #ref3               #ref4               #ref5
+*
+* */
+
+void printLinkedList(Node head){
+Node temp=head;
+
+while(temp!=null){
+print(temp.val);
+temp = temp.next;
+}
+}
+TC:O(N)
+SC:O(1)

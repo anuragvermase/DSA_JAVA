@@ -1,0 +1,31 @@
+Ques: Insert in a linked list.
+insert after last Node. (val=60)
+
+  head
+ val =10          val =20           val =30             val=40              val=50
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5
+
+ CODE:
+ void insertAtLast(Node head, int val){
+ //creating instance/object
+ Node n1 = new Node(val);
+ int temp = head;
+
+ while(temp.next!=null){
+ temp = temp.next;
+ }
+
+ temp.next = n1;
+
+ }
+
+ // after adding
+
+   head                                                                     temp
+ val =10          val =20           val =30             val=40              val=50            val = 60
+ next=#ref2   ->  next=#ref3   ->   next=#ref4    ->    next=#ref5    ->    next=n1    ->     next=null
+
+ #ref1            #ref2             #ref3               #ref4               #ref5             #ref6 (n1)
+
