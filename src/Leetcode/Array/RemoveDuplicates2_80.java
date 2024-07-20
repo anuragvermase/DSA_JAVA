@@ -49,7 +49,7 @@ public class RemoveDuplicates2_80 {
 
         int  resultLength = removeDuplicates2(nums);
 
-        System.out.println("Number of element after removing dulplicates :"+resultLength);
+        System.out.println("Number of element after removing duplicates :"+resultLength);
 
         System.out.println("New Array : ");
         for (int i = 0; i < resultLength; i++) {
