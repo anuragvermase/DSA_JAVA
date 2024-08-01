@@ -26,7 +26,7 @@ public class reverseString {
             ep--;
         }
         //converts character array to string
-        String ans = str.valueOf(ch);
+        String ans = String.valueOf(ch);
         System.out.println(ans);
 
     }

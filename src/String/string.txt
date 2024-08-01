@@ -39,6 +39,7 @@ ASCII:
 .
 .
 '9' -> 57
+______________________________________________________________________________________
 
 *Character Rules:
 1. you can do any mathematical operation on character & the answer will be integer.
