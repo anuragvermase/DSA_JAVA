@@ -7,14 +7,14 @@ Quiz: How many numbers  are in range [3,10] {corners included}
 
 --------------------------------------------------
 
-x^2 =10  =>  2=logx(10)         (log base x)
+x^2 =10  =>  2=logx(10)         (logx : log base x)
 
-(logb)a = ans => a=b^ans       (log base b)
-{b की कितनी पावर ली जाए की a निकल जाए}
+(logb)a = ans => a=b^ans       (logb : log base b)
+{b की कितनी पावर(ans) ली जाए की a निकल जाए}
 
-(log2)10 = ans => 10 = 2^ans   (log base 2)
-{ans की कितनी पावर ली जाए की 10 निकल जाए}
-ans=2.333...
+(log2)10 = ans => 10 = 2^ans   (log2 : log base 2)
+{2 की कितनी पावर(ans) ली जाए की 10 निकल जाए}
+ans=3.333...
 
 (log2)64 =ans => 64=2^ans
 ans = 6
@@ -38,7 +38,7 @@ Quiz: No. of steps for N-> N/2-> N/4-> ...... 1.
 
 ((N*1/2)*1/2)*1/2 . . . )=1
 
-N/2^count = 1
+N/(2^count) = 1
 
 N = 2^count
 (log2)N = count                      (log base 2)
@@ -53,7 +53,7 @@ AP series : 3 7 11 15 19 23 27 . . .
 1    2     3      4                 N
 a (a+d) (a+2d) (a+3d) . . . . . [a+(N-1)d]
 
-Sum of First N terms : N/2[2a + (N-1)d]
+Sum of First N terms : (N/2)[2a + (N-1)d]
 
 ---------------------------------------------------
 Geometric Progression (G.P.)
@@ -153,7 +153,7 @@ void func(int N){
    }
 }
 
-Ans: i=i*2 gives always 0, and less than N {i<=N}
+Ans: i=i*2 gives always 0 (as 'i' initialize with zero), and less than N {i<=N}
      Infinite times
 
 ---------------------------------------------------
@@ -218,6 +218,8 @@ void func(int N){
 
 Ans: i loop : [1,N]
      j loop : [1,i]
+
+     Sum of the First n Natural Number :
      [N*(N+1)]/2 times
      Big O notation : O(N^2)
 
@@ -263,11 +265,11 @@ Ans: i loop : [1,N]
 
 Comparison of iteration:
 
-1<logN<sqrt(N)<N<NlogN<Nsqrt(N)<N^2<N^N . . .
+1 < logN < sqrt(N) < N < NlogN < Nsqrt(N) < N^2 < N^N . . .
 {takes Right most side values}
 
 Time complexity
--> Big O Notation -> Approx iteration
+-> Big O Notation -> (Approx iteration)
 
 eg: 20N^2 + 20N + 30.
 
@@ -279,6 +281,9 @@ steps to follow:
 3. neglect constants
     N^2
 =>Big O Notation = O(N^2)
+
+eg. 6N^2 + 15N +100
+ -> O(N^2)
 
 eg: 4N + 3NlogN + 100
  -> O(NlogN)
