@@ -1,6 +1,6 @@
 /*
 * Print Nth fibonacci number
-*
+* eg : 0 1 1 2 3 5 8 13 21 34    {indexing from '0'}
 * formula:
 * fib(N)=fib(N-1)+fib(N-2);
 * */
@@ -20,6 +20,8 @@ public class nthFibonacciNUmber {
 
         int temp1 = nthNum(N-1); //main logic : fib(N)=fib(N-1)+fib(N-2);
         int temp2 = nthNum(N-2);
+//      or  int temp = nthNum(N-1) + nthNum(N-2);
+//          return  temp;
         return temp1+temp2;
 
     }

@@ -35,16 +35,16 @@ binary number : ( 1 0 1 0 1 )₂
 
 => 1*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 1*2^0 = 21
 
-Ques : (102010)₂ -> Invalid Input.
+Ques : (102010)₂ -> Invalid Input. {'2' is not a binary number}
 
 __________________________________________________________
 
 Add binary numbers :
 
-   0 1 0 1 1 1               1 + 0 = 1
-   0 1 1 1 1 0               1 + 1 = 1 0       1 carry
-   ___________               1 + 1 + 1 = 1 1   1 carry
-   1 1 0 1 0 1               0 + 0 = 0
+   0 1 0 1 1 1            |   1 + 0 = 1
+   0 1 1 1 1 0            |   1 + 1 = 1 0       1 carry
+   ___________            |   1 + 1 + 1 = 1 1   1 carry
+   1 1 0 1 0 1            |   0 + 0 = 0
 
 _________________________________________________________
 
@@ -143,7 +143,7 @@ So N & 1 : if 0 -> even
 
 pseudo code:
 
-if(N&1==0){
+if( N&1 == 0 ){
   sop("even");
 }else{
   sop("odd")
@@ -171,7 +171,8 @@ Properties:
 -> N^N=0
 -> N^0=N
 
-Ques : Given an array arr[N], every element appears twice except for one element which appers once, find that unique element.
+Ques : Given an array arr[N], every element appears twice except for one element which appears once,
+find that unique element.
 Eg: arr[7] : {6 8 8 7 7 10 6} -> 10
     arr[5] : {2 2 1 9 9} -> 1
 
@@ -197,18 +198,18 @@ a=45 :     1 0 1 1 0 1  ->45
 a<<1 :   1 0 1 1 0 1 0  ->90 {left shift by 1 index and add 0 to right}
 a<<2 : 1 0 1 1 0 1 0 0  ->180
 
-Note: *2 with every leftshift(<<)
+Note: '*2' with every left shift(<<)
 a<<N = a*(2^N)
 
 Quiz: a==1
-      1<<N = 1*2^N = 2^N
+      1<<N = 1*2^N = 2^N  {N: number of shifts}
 
       -> for 2^N, you need to use left shift operator.
 
 ->right shift(>>):
 
 a=10 :  0 1 0 1 0   ->10    {last bit removed}
-a>>1 :  0 0 1 0 1   ->5     {move one index right }
+a>>1 :  0 0 1 0 1   ->5     {move one index right and add 0 tho left}
 a>>2 :  0 0 0 1 0   ->2
 
 a>>N : a/(2^N)

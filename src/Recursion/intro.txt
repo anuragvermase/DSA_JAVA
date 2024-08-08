@@ -4,7 +4,7 @@ Why, Where recursion ???
 ->DP      : Amazon
 ->Graph   : Google
 
-Recursion : Function calling itself
+Recursion : Function calling itself.
 
 Thought Process:
 Sum(N) = 1+2+3+4+......+(N-1)+N.
@@ -25,7 +25,7 @@ Ques : Given N , Find Sum of nos. form(1....N)
 Three magical steps of recursion:
 1.Faith: What your function should do and have faith that the function works
 
-2.Main logic: Solving your Problem with sub-problem {smaller instance of same program}.
+2.Main logic: Solving your Problem with sub-problem {sub-problem :smaller instance of same program}.
 
 3.Base condition: Solution to smallest sub-problem.
 

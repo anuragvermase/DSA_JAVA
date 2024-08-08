@@ -1,12 +1,12 @@
-HashMaps : HashMap in Java stores the data in (Key, Value) pairs, and you can access them by an index of another type (e.g. an Integer).
-One object is used as a key (index) to another object (value). If you try to insert the duplicate key in HashMap, it will replace
-the element of the corresponding key.
+HashMaps : HashMap in Java stores the data in (Key, Value) pairs, and you can access them by an index of
+another type (e.g. an Integer). One object is used as a key (index) to another object (value).
+If you try to insert the duplicate key in HashMap, it will replace the element of the corresponding key.
 
 (Key, Value) pair
 
 => Store population of every country:
-   Key : Country name : String
-   value : population : int/long
+   Key   : Country name : String
+   value : population   : int/long
 
 => Store all the school with their principal name.
    Key : String
@@ -24,7 +24,7 @@ char    -> Character
 double  -> Double
 String  -> String
 
-Not application : arrays, objects.
+Not applicable : arrays, objects.
 
 2. Values can be of any type
 ___________________________________________________________
@@ -38,7 +38,7 @@ hm.put(10,50);
 hm.put(20,60);
 hm.put(30,60);
 hm.put(20,70); -> replace last value(60) in that key
-Time complexity : O(1)
+Time complexity : O(1)   {to add or put}
 
  _keys___Values_
 | 10      50   |
@@ -49,20 +49,18 @@ Time complexity : O(1)
 //GET
 hm.get(20); -> 70
 hm.get(40); -> null
-
-Time complexity : O(1)
+Time complexity : O(1)  {to get}
 
 //containsKey-> check if key exists
 hm.containsKey(20); -> True
 hm.containsKey(40); -> False
-
 Time complexity : O(1)
 
 //remove
 hm.remove(10); -> it will remove(10,50)
 T.C. ->O(1)
 
-//Size
+//Size -> how many keys are there
 hm.size() -> give no of keys
 
 //Iterate on HashMap
@@ -78,11 +76,11 @@ hm.size() -> give no of keys
  }
 
 ___________________________________________________________
-
-HashSet
+Set or HashSet
 -> Only the key part of HashMap
+-> When we need only keys
 
-HashSet<Integer> hs = new HashSet<>(); (random order)
+HashSet<Integer> hs = new HashSet<>(); (random ordered as hashmap)
 
 //add
 hs.add(10); -> add
@@ -96,7 +94,7 @@ hs.remove(10); -> removes 10
 hs.contains(20); -> true
 hs.contains(10); -> false
 
-//size
+//size -> how many keys are there
 hs.size(); -> 1
 
 

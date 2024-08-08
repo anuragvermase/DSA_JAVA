@@ -2,7 +2,6 @@
  * Given a and N , calculate a^N
  * */
 
-
 //This method have better time complexity, because we use N/2
 package Recursion;
 
@@ -26,13 +25,18 @@ public class powerCal {
         }
     }
 }
+
 /* N/2->N/4->N/8 . . . -> logN
+ *
  * powOfa(3,5)->powOfa(3,2)->powOfa(3,1)-> 3 functions (i.e. function runs 3 times)
+ *
  * No. of functions = 3;
  * time complexity of one function = O(1);
+ *
  * Overall complexity = O(1)*logN  (N: number of functions)
  * recursion complexity = O(logN)  {Optimised Complexity}
  */
+
 
 //__________________________________________________________________________________________
 
@@ -56,10 +60,12 @@ public class powerCal {
 }
 */
 
-
-/*powOfa(3,5)->powOfa(3,4)->powOfa(3,3)->powOfa(3,2)->powOfa(3,1)-> 5 functions (i.e. function runs 5 times)
+/*
+* powOfa(3,5)->powOfa(3,4)->powOfa(3,3)->powOfa(3,2)->powOfa(3,1)-> 5 functions (i.e. function runs 5 times)
+*
 * No. of functions = 5;
 * time complexity of one function = O(1);
+*
 * Overall complexity = O(1)*N  (N: number of functions)
 * recursion complexity = O(N)
 */

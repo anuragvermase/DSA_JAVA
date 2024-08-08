@@ -10,6 +10,11 @@
 * Output :4  6 7
 *         76 5 73
 *         12 3 0
+*____________________
+* Hint: L to R
+*       R to L
+*       L to R
+* {print is row wise here}
 
 * */
 
@@ -17,7 +22,7 @@ package TwoDArray;
 
 import java.util.Scanner;
 
-public class printWaveForm {
+public class  printWaveForm {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); //row

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class hashMap {
     public static void main(String[] args) {
-        HashMap<Integer, Integer> hm = new HashMap<>();
+        HashMap<Integer,Integer> hm = new HashMap<>();
         hm.put(10,20);
         hm.put(20,30);
         hm.put(30,50);

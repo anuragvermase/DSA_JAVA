@@ -1,4 +1,4 @@
-/*Find Frequency
+ /*Find Frequency
 * Given N array element & Q queries. for every query find frequency of element in array.
 * Eg: arr[11] :{2 6 3 8 2 8 2 3 8 10 6}
 *

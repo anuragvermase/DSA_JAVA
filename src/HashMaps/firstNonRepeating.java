@@ -28,6 +28,7 @@ public class firstNonRepeating {
             if(hm.containsKey(arr[i])){
                 int temp = hm.get(arr[i]);
                 hm.put(arr[i],temp+1 );
+//                hm.compute(arr[i], (k, temp) -> temp + 1);
             }else{
                 hm.put(arr[i],1);
             }
@@ -38,6 +39,7 @@ public class firstNonRepeating {
                 break;
             }
         }
+
     }
 }
 

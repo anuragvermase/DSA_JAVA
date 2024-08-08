@@ -1,0 +1,27 @@
+Sequencing:
+
+1. Introduction
+2. Pattern
+3. Function
+4. ProblemSolving
+5. Array
+6. TwoDArray
+   i.  printMatrixRowWise
+   ii. printMatrixColWise
+   iii.printWaveForm
+7. String
+8. TimeComplexity
+9. BitManipulation
+10.HashMaps
+   - hashMap
+   - findFrequency
+   - firstNonRepeating
+   - noOfDistinctElement
+   - pairSum
+11.Recursion
+   - factorialOfN
+   - nthFibonacciNumber
+12.Sorting
+13.BinarySearch
+14.ClassesNObjects
+15.LinkedList
