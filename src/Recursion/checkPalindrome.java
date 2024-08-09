@@ -1,5 +1,8 @@
 //Given an array {character}, check if it is palindrome or not?
-
+/*
+e.g. : MALAYALAM -> return true
+e.g. : aabb -> return false
+*/
 package Recursion;
 
 public class checkPalindrome {
