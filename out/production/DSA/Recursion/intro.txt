@@ -54,14 +54,17 @@ _____________________________________________________________________
 Space Complexity:
 
 -> How much space are you using.
-Iterative : Time Complexity
+Iterative : Space Complexity
 Variables : O(1)
 Array     : O(N)
 String    : O(N)
 
-In recursive Call stack space also counts {variables, array, string, call stack}
+In recursive, Call stack space also counts {variables, array, string, call stack}
 
 NOTE : Input or Output won't be considered in space complexity (Big O notation).
 
-** If you delete a space that is already considered in your space complexity and create new space in place of
-previous space, you are not increasing your space complexity.
+** If you delete a space that is already considered in your space complexity and create new space in place
+of previous space, you are not increasing your space complexity.
+
+
+total space complexity : (space complexity of one function)*(max. number of levels)

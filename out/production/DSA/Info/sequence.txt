@@ -6,9 +6,9 @@ Sequencing:
 4. ProblemSolving
 5. Array
 6. TwoDArray
-   i.  printMatrixRowWise
-   ii. printMatrixColWise
-   iii.printWaveForm
+   - printMatrixRowWise
+   - printMatrixColWise
+   - printWaveForm
 7. String
 8. TimeComplexity
 9. BitManipulation
@@ -19,9 +19,17 @@ Sequencing:
    - noOfDistinctElement
    - pairSum
 11.Recursion
+   - program
+   - sumOfN
    - factorialOfN
    - nthFibonacciNumber
+   - printIncreasing
+   - powerCal
+   - checkPalindrome
 12.Sorting
+   - orderOfRemoval
+   - goodInteger
+   - goodIntegerRepeat
 13.BinarySearch
 14.ClassesNObjects
 15.LinkedList

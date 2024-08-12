@@ -1,15 +1,22 @@
 /*
 * Order of removal:
-* Given N element at every step remove an array element. Cost to remove element =sum of array elements present.
-* Find min. cost to remove all element.
+* Given N element at every step remove an array element. Cost to remove element = sum of array elements
+*  present. Find min. cost to remove all element.
 * NOTE : add cost first and then remove.
-* eg. arr[3] = {3 2 5}
+* e.g. arr[3] = {3 2 5}
 * remove 5 : 10
 * remove 3 : 5
 * remove 2 : 2
 * total cost : 17
 *
-* remove the element from max. element to min. element (to find minimum cost)
+** remove the element from max. element to min. element (to find minimum cost)
+*  arr[3] = {3 2 5}
+*  after sorting
+*  remove 5 : 2 + 3 + 5
+*  remove 3 : 2 + 3
+*  remove 2 : 2
+*
+* we have seen that the frequency : (N-i) {where N = length & i = index} 2*3 3*2 5*1
 *
 * */
 

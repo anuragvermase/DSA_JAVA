@@ -21,6 +21,12 @@ public class goodIntegerRepeat {
         Arrays.sort(arr);
         int count=0;
         int lessCount=0;
+
+        //handled for 0th index {if 0 is at the very first position}
+        if (arr[0]==0){
+            count++;
+        }
+
         for (int i = 1; i < arr.length; i++) {
 
             if(arr[i]!=arr[i-1]){

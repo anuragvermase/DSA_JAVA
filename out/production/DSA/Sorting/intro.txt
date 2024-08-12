@@ -1,10 +1,10 @@
 Sorting : Arranging data in increasing or decreasing order.
 
-Ex:2 4 10 15 27 -> True (Increasing)
-Ex:20 7 3 -5 -8 -> True (Decreasing)
+Ex : 2 4 10 15 27 -> True (Increasing)
+Ex : 20 7 3 -5 -8 -> True (Decreasing)
 
-Ex:     1 2 3 7 4 9 6 -> Not sorted on the basis of value
-factor: 1 2 2 2 3 3 4 -> Sorted on the basis of factor count
+Ex :           1 2 3 7 4 9 6 -> Not sorted on the basis of value
+factor count : 1 2 2 2 3 3 4 -> Sorted on the basis of factor count
 
 Techniques of sorting :
 bubble sort
@@ -20,20 +20,31 @@ If a problem have many steps and one of its step is sorting, then
 
 Steps to solve Problem:
 1.   2.   3.   4.
-
 ** if the first (1) step is the sorting step then we cannot use sorting techniques,
 we use Inbuilt sorting function to sort the array.
 
-i.e. Arrays.sort(arr); -> this function sort the arr ay in increasing order
+i.e. Arrays.sort(arr); -> this function sort the arr ay in 'increasing order'.
 
-T.C : O(NlogN)        S.C. : O(N)
+T.C :        O(NlogN)        S.C. : O(N)
 worst T.C. : O(N²)
-
+** O(NlogN) is best T.C., we cannot write code better than this T.C.
+______________________________________________________________________________
 SORTING TECHNIQUES:
 BUBBLE SORT: sort the array in asc. order but we can swap adjacent element only.
 
 arr[8]: {5 7 5 4 10 -2 6 3 }
-//we need to put greater (10) element at the end.
-arr[8]: {5 7 5 4 -2 6 3 10}
+/*
+we need to put greater (10) element at the end.
+after every iteration one element place at the right position {last}
+*/
 
+iteration 0 : {5 5 4 7 -2 6 3 10}    [0,N-2] iterations , 10 is placed
+iteration 1 : {5 4 5 -2 6 3 7 10}    [0,N-3] iterations , 7 & 10 is placed
+iteration 2 : {4 5 -2 5 3 6 7 10}    [0,N-4] iterations , 6, 7 & 10 is placed
+iteration 3 : {4 -2 5 3 5 6 7 10}    [0,N-5] iterations , 5, 6, 7 & 10 is placed
+iteration 4 : {-2 4 3 5 5 6 7 10}    [0,N-6] iterations , 5, 5, 6, 7 & 10 is placed
+iteration 5 : {-2 3 4 5 5 6 7 10}    [0,N-7] iterations , 4, 5, 5, 6, 7 & 10 is placed
+iteration 6 : {-2 3 4 5 5 6 7 10}    [0,N-8] iterations , 3, 4, 5, 5, 6, 7 & 10 is placed
+
+** (N-1) iterations we need tho sort the array. e.g. (8-1) = 7 iterations
 

@@ -27,6 +27,9 @@ Sequencing:
    - powerCal
    - checkPalindrome
 12.Sorting
+   - orderOfRemoval
+   - goodInteger
+   - goodIntegerRepeat
 13.BinarySearch
 14.ClassesNObjects
 15.LinkedList
