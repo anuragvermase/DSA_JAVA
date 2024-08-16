@@ -1,4 +1,11 @@
-//insertion sort
+/*
+INSERTION SORT :
+
+Insertion sort is a simple sorting algorithm that works by iteratively inserting each element
+of an unsorted list into its correct position in a sorted portion of the list. It is a stable
+sorting algorithm, meaning that elements with equal values maintain their relative order in
+the sorted output.
+*/
 package Sorting.Techniques;
 
 import java.util.Scanner;
@@ -22,7 +29,7 @@ public class insertionSort {
 
     }
     public static void sort(int[] nums){
-        for(int i = 1 ; i<nums.length; i++){   //'i' starts with 1 because we don't need to check the
+        for(int i = 1 ; i<=nums.length-1; i++){   //'i' starts with 1 because we don't need to check the
                                                // correct order of single {0th} element
             int j = i;
             while(j>0 && nums[j-1]>nums[j]){
