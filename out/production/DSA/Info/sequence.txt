@@ -30,6 +30,12 @@ Sequencing:
    - orderOfRemoval
    - goodInteger
    - goodIntegerRepeat
+   - Techniques :
+     - selectionSort
+     - bubbleSort
+     - insertionSort
+     - mergeSort
+     - quickSort
 13.BinarySearch
 14.ClassesNObjects
 15.LinkedList
