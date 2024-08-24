@@ -37,5 +37,8 @@ Sequencing:
      - mergeSort
      - quickSort
 13.BinarySearch
+   - binarySearch
+   - floorBinarySearch
+   - uniqueEleSearch
 14.ClassesNObjects
 15.LinkedList

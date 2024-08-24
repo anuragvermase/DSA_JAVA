@@ -35,7 +35,7 @@ public class floorBinarySearch {
             int mid = lo + (hi - lo) / 2;
             if (arr[mid]==k){
                 return arr[mid];
-            } else if (arr[mid]<k) {
+            } else if (arr[mid] < k) {
                 lo=mid+1;
                 ans = arr[mid];
             }else {
@@ -45,3 +45,6 @@ public class floorBinarySearch {
         return ans;
     }
 }
+
+//TC : O(logN)
+//SC : O(1)

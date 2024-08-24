@@ -8,8 +8,8 @@
 * TC: O(N)   SC: O(1)
 *
 * IDEA 2: Binary search
-* indexing :  0 1 2 3 4 5 6  7  8  9 10 11 12 13 14
-* arr[15]  : {4 4 1 1 9 9 11 11 20 7 7  3  3  5  5}
+* indexing :   0 1 2 3 4 5 6  7  8  9 10 11 12 13 14
+* arr[15]  : { 4 4 1 1 9 9 11 11 20 7 7  3  3  5  5 }
 * occurrence = 20
  * pre single occurrence : Numbers are starting from even
  * post single occurrence :Numbers are starting from odd
@@ -35,13 +35,12 @@
  *     mid--;
  *  }
  *
- *
   * */
 package BinarySearch;
 
 import java.util.Scanner;
 
-public class UniqueEleSearch {
+public class uniqueEleSearch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -67,21 +66,18 @@ public class UniqueEleSearch {
         int lo = 2;
 
         while(lo<=hi){
-            int mid = (hi+lo)/2;
+            int mid = lo+(hi-lo)/2;
             if(nums[mid]!=nums[mid-1] && nums[mid]!=nums[mid+1] ){
                 return nums[mid];
             }
             if (nums[mid]==nums[mid-1]) {
                 mid--;
             }
-            if(mid%2==0){
-                lo = mid+2;
+            if(mid % 2 == 0){
+                lo = mid + 2;
             }else {
-                hi = mid-1;
+                hi = mid - 1;
             }
-
-
-
         }
         return -1;
     }

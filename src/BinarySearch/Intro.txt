@@ -7,15 +7,22 @@ Police - must have knowledge of these two
 Eg:
 {Whom to search}            {where to search}
 word(AlgoPrep)              {newspaper/book/dictionary}   : we prefer dictionary
-contact number (HP)         {LinkedIn/telephone directory}   : we prefer telephone directory
+contact number (HR)         {LinkedIn/telephone directory}   : we prefer telephone directory
 
 -> Search space is ordered, searching become easier
 
-Linear Search : Searching one by one
+** Note : Binary Search can be possibly applied even if array is not sorted
 
-Binary Search : Divide your search space in 2 parts, if we can discard one half, we can apply BS.
+Linear Search : Searching one by one.
+
+Binary Search : Divide your search space in 2 parts, if we can discard one half, we can apply Binary Search.
 -> Array should not necessarily be sorted.
 _________________________________________________________________
+
+Ques : Given a sorted arr[N] search if 'k' is present or not  ?
+arr[10] : {4 7 10 13 15 20 21 24 26 28}
+k=13 (true)
+
 IDEA behind searching:
 
 Idea 1 : Linear search:
@@ -43,6 +50,7 @@ mid = (lo+hi)/2
 if(arr[mid]>K){
 //discard right side & search in left
 }
+
 _______________________________________________________________
 Mid-Calculation :
 
