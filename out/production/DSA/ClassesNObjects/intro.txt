@@ -1,8 +1,9 @@
 Classes and Objects :
 
 Classes: To combine different data types and data structures.
+
 Need of creating classes:
-When we are creating custom data types.
+-> When we are creating custom data types.
 
 Creating Class:
 
@@ -17,11 +18,18 @@ Pair p1 = new Pair();
 Pair p2 = new Pair();
 Pair p3 = new Pair();
 
+***NOTE : Integers predefined value is zero (0).
+          String predefined value is empty string ("")
+          boolean predefined value is false
+eg: if int x;  {x=0}
+    if String color; {color = ""}
+    if boolean pool; {pool = false}
+
 p1,p2,p3: are independent.
 all have there x and y.
 
 let, System.out.println(p2.y); //0 {default value of integer is zero(0)}
-p2.y=50;
+p2.y = 50;
 System.out.println(p2.y); //50
 _____________________________________________________________________________
 Class: It is a blueprint.
@@ -58,12 +66,20 @@ public static class Pair{
 int x;
 int y;
 
+//constructor with two parameter
 Pair(int v1,int v2){     //constructor {we can create multiple constructor}
-x=v1
-y=v2
+x = v1
+y = v2
+}
+
+//constructor with one parameter
+Pair(int v1){
+x = v1
 }
 
 }
+
+if we created the constructor, then we have to pass the value in pair(); otherwise it throws error.
 
 if we want to assign values to x & y:
 Pair p1 =new Pair(20,20);  //not write extra line of code to assign values

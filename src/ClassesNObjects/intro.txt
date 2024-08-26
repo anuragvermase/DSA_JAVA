@@ -1,8 +1,9 @@
 Classes and Objects :
 
 Classes: To combine different data types and data structures.
+
 Need of creating classes:
-When we are creating custom data types.
+-> When we are creating custom data types.
 
 Creating Class:
 
@@ -17,11 +18,18 @@ Pair p1 = new Pair();
 Pair p2 = new Pair();
 Pair p3 = new Pair();
 
+***NOTE : Integers predefined value is zero (0).
+          String predefined value is empty string ("")
+          boolean predefined value is false
+eg: if int x;  {x=0}
+    if String color; {color = ""}
+    if boolean pool; {pool = false}
+
 p1,p2,p3: are independent.
 all have there x and y.
 
 let, System.out.println(p2.y); //0 {default value of integer is zero(0)}
-p2.y=50;
+p2.y = 50;
 System.out.println(p2.y); //50
 _____________________________________________________________________________
 Class: It is a blueprint.
@@ -58,12 +66,20 @@ public static class Pair{
 int x;
 int y;
 
+//constructor with two parameter
 Pair(int v1,int v2){     //constructor {we can create multiple constructor}
-x=v1
-y=v2
+x = v1
+y = v2
+}
+
+//constructor with one parameter
+Pair(int v1){
+x = v1
 }
 
 }
+
+if we created the constructor, then we have to pass the value in pair(); otherwise it throws error.
 
 if we want to assign values to x & y:
 Pair p1 =new Pair(20,20);  //not write extra line of code to assign values
@@ -72,19 +88,21 @@ ________________________________________________________________________________
 
 Nested Class:
 
-let int x = "Great";
-Pair p1 = 10;                   //Pair is a Class
+let,
+int x = "Great";   //not possible
+Pair p1 = 10;      //not possible        {Pair is a Class}
 {So, while assigning , type should bhi same}
 
 **nested class**
 -----------------
 class Node{
-int val;
-Node next;
+int val;                      //int - type, val - variable name
+Node next;                    //node - type, next - variable name
 
 Node (int v1){
 val = v1
 }
+
 }
 
 objects:
@@ -113,7 +131,7 @@ n1:
 int val = 10;
 Node next = n2;
 ________________
-print(n1.next.val) //20 {we can access n2's value through n1}
+print(n1.next.val) //20 {we can access n2's value through n1, without using n2.}
 
 creating 3rd object
 Node n3 = new Node(30);
@@ -129,11 +147,14 @@ print(n2.next.next) //null {n2.next means next of n2, n2.next.next means next of
 print(n1.next.next.val) //30 {val of n3}
 print(n1.next) // reference of n2
 _______________________
+
 Node n0 = new Node();
-when we created a variable(n0) with new keyword computer assign a name to that variable also,
+when we created a variable(n0) with 'new' keyword, computer assign a name to that variable also.
 let it be reference(#ref0) {random values or hashcode}
+
 user's given name :n0
 computer given name :#ref0
+
 so, follow this condition n1, n2, n3 have their reference value let it be :#ref1, #ref2, #ref3.
 
 ________________________________________________________________________________________________
@@ -149,5 +170,5 @@ print (head.val) -> 10
 print (head.next.val) -> 20
 print (head.next.next.next) -> #ref4
 
-this is noting but Linked list : A Nested Class whose many occurrences connected to each other and
+this is noting but Linked list : A Nested Class whose many occurrences connected to each other, and
 we know the name of first occurrence.

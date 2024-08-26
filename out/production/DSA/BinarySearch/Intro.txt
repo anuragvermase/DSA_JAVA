@@ -61,21 +61,21 @@ Another way:
 mid = lo + (hi-lo)/2
 
 **** use this method instead of above method.
-_______________________________________________________________
+
 eg :
 hi -> integer
 lo -> integer
-integer range : -2^32 to 2^32-1
+integer range : -2^31 to 2^31 - 1
 
 therefore if we use :
 mid=(hi+lo)/2
 let lo -> 1
-    hi -> 2^32-1
+    hi -> 2^31-1
 
-mid =(1+ 2^32-1)/2   {at (1+ 2^32-1) this stage it exceeding the integer range }
+mid =(1+ 2^31-1)/2   {at (1+ 2^31-1) this stage it exceeding the integer range }
 
 so we use:
 mid = lo + (hi-lo)/2
 mid = 1 + (2^32-1 -1)/2 {not exceeding the integer range at any point}
 
-SO,IT PREVENTS OVERFLOW.
+*** SO,IT PREVENTS OVERFLOW.
