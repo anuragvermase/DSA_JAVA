@@ -13,10 +13,12 @@
  while(temp.next.next!=null){
  temp = temp.next;
  }
+
  temp.next = null;
+
  }
-  // JAVA has garbage collector which automatically delete variable or anything which is not accessible.
-  // When temp.next #ref4 (temp.next= null) then #ref5 not accessible.
+// JAVA has garbage collector which automatically delete variable or anything which is not accessible.
+// When temp.next #ref4 (temp.next= null) then #ref5 not accessible.
 
  output :
 

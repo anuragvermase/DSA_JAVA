@@ -13,7 +13,7 @@ prev      curr             currP1
  Node curr = head;
  Node prev = null;
 
- while(curr!= null){              //or prev.next!=null  (exit condition)
+ while(curr!= null){              //or prev.next!=null  (for exit condition)
  Node  currP1 = curr.next;
  curr.next = prev;
 

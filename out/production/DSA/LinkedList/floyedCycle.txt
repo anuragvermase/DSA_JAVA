@@ -42,13 +42,20 @@ s,f                        |        #10->
                             #15 <-          #13  <-
                                     #14 <-
 
+Steps:
+-  place slow and fast pointer at head {starting}
+1. after sometime they will meet.
+2. pick one pointer{s or f} & put it equal to head
+3. then, start jumping one step at a time with both s & f, they will meet magically at 'start point of cycle'.
+
+
 //Psuedo code:
 
 Node remove (Node head ){
-Node s = head;
+Node s = head;  //check here: s=f=head white condition false in 1st iteration
 Node f = head;
 
-While(s!=f){
+While(s!=f){    //check f==null or f.next = null or if it is not cycle
 s=s.next;
 f=f.next.next;
 }
@@ -62,6 +69,8 @@ f=f.next;
 
 return s;   //or return f;
 }
+
+
 
 TC: O(N)
 SC: O(1)

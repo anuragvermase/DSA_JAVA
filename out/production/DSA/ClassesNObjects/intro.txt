@@ -88,19 +88,21 @@ ________________________________________________________________________________
 
 Nested Class:
 
-let int x = "Great";
-Pair p1 = 10;                   //Pair is a Class
+let,
+int x = "Great";   //not possible
+Pair p1 = 10;      //not possible        {Pair is a Class}
 {So, while assigning , type should bhi same}
 
 **nested class**
 -----------------
 class Node{
-int val;
-Node next;
+int val;                      //int - type, val - variable name
+Node next;                    //node - type, next - variable name
 
 Node (int v1){
 val = v1
 }
+
 }
 
 objects:
@@ -129,7 +131,7 @@ n1:
 int val = 10;
 Node next = n2;
 ________________
-print(n1.next.val) //20 {we can access n2's value through n1}
+print(n1.next.val) //20 {we can access n2's value through n1, without using n2.}
 
 creating 3rd object
 Node n3 = new Node(30);
@@ -145,11 +147,14 @@ print(n2.next.next) //null {n2.next means next of n2, n2.next.next means next of
 print(n1.next.next.val) //30 {val of n3}
 print(n1.next) // reference of n2
 _______________________
+
 Node n0 = new Node();
-when we created a variable(n0) with new keyword computer assign a name to that variable also,
+when we created a variable(n0) with 'new' keyword, computer assign a name to that variable also.
 let it be reference(#ref0) {random values or hashcode}
+
 user's given name :n0
 computer given name :#ref0
+
 so, follow this condition n1, n2, n3 have their reference value let it be :#ref1, #ref2, #ref3.
 
 ________________________________________________________________________________________________
@@ -165,5 +170,5 @@ print (head.val) -> 10
 print (head.next.val) -> 20
 print (head.next.next.next) -> #ref4
 
-this is noting but Linked list : A Nested Class whose many occurrences connected to each other and
+this is noting but Linked list : A Nested Class whose many occurrences connected to each other, and
 we know the name of first occurrence.

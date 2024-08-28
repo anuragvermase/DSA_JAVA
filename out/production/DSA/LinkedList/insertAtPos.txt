@@ -14,7 +14,7 @@ insert at index : k=3, (val=60).
  Node n1 = new Node(val);
  int temp = head;
  //jump k-1, because we are already at head position.
- for(int i = 1; temp<=k-1;i++){
+ for(int i = 1; temp <= k-1;i++){
  temp=temp.next;
  }
  tempP1 = temp.next; //tempP1 have reference of temp+1 node
@@ -30,3 +30,9 @@ insert at index : k=3, (val=60).
 
   #ref1            #ref2             #ref3              #ref0 (n1)         #ref4               #ref5
 
+
+
+Some Edge cases have to handle:
+-> head == null
+-> head == 0
+-> head == size
