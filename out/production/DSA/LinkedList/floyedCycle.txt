@@ -49,25 +49,28 @@ Steps:
 3. then, start jumping one step at a time with both s & f, they will meet magically at 'start point of cycle'.
 
 
-//Psuedo code:
+//Pseudo code:
 
-Node remove (Node head ){
-Node s = head;  //check here: s=f=head white condition false in 1st iteration
-Node f = head;
+Node remove(Node head){
+   if (head == null || head.next == null) {
+    return null; // No cycle if the list is empty or has only one node
+   }
+   Node s = head;
+   Node f = head;
 
-While(s!=f){    //check f==null or f.next = null or if it is not cycle
-s=s.next;
-f=f.next.next;
-}
-
-f=head;  //or s=head
-
-while(s!=f){
-s=s.next;
-f=f.next;
-}
-
-return s;   //or return f;
+   While(f!=null && f.next!=null){
+     s=s.next;
+     f=f.next.next;
+     if(s==f){
+       s = head;  //or, f = head
+       while(s!=f){
+         s=s.next;
+         f=f.next;
+       }
+       return s;  //or, return f;
+     }
+   }
+ return null;
 }
 
 
