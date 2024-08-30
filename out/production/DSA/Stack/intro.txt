@@ -1,0 +1,30 @@
+Stack : Last In First Out
+
+Syntax: Stack <Integer> st =  new Stack<>();
+
+Operations :                               Time Complexity
+
+st.push(10) -> add in stack                   //TC:O(1)
+
+st.pop() -> remove top form stack and return  //TC:O(1)
+
+st.peek() -> tell you the topmost element     //TC:O(1)
+
+st.size() -> no. of element in stack          //TC:O(1)
+
+|      |
+|      |
+|  40  |
+|  30  |      -> Stack
+|  20  |
+|  10  |
+--------
+
+Stack Real World Examples
+1. Pile of plate
+2. undo/redo
+3. Bangles in hand
+
+
+LinkedList Real World Examples
+1. LRU Cache
