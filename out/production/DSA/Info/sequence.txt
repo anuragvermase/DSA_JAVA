@@ -52,3 +52,4 @@ Sequencing:
    - reverseLinkedList.txt
    - midOfLinkedList.txt
    - floyedCycle.txt
+16.Stack
