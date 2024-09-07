@@ -66,3 +66,7 @@ public class validParentheses {
         }
     }
 }
+
+
+//SC : O(n)
+//TC : O(n)
