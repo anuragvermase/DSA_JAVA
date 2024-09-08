@@ -1,0 +1,23 @@
+// Queue
+- first in first out (FIFO)
+add :10
+add :20
+add :30
+add :40
+
+first out  <-  10 20 30 40   <- first in
+
+real life example:
+1. line
+2. task scheduling
+
+Queue initialize :
+Queue <Integer> q = new LinkedList <>();
+
+Operations :
+q.add(x); -> insert x at end of the queue
+q.remove(); -> remove/delete x from front of the queue
+q.peek(); -> return the front element
+q.size(); -> no. of element
+
+

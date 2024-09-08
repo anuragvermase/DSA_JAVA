@@ -1,0 +1,37 @@
+// Reverse first K element
+Given a Queue, Reverse it's first K elements.
+
+eg: 3 10 2 12 19 6 8 10 14
+ k=4
+
+So the final output will be : 12 2 10 3  19 6 8 10 14
+
+//Idea 1:
+
+step 1: push 'k' elements from queue to stack
+step 2: put 'k' elements back from stack to queue
+step 3: remove the first n-k elements from the front and add at the end
+
+//Pseudo code
+
+Queue<> reverseKElements (Queue<>q, int k){
+Stack <Integer> s = new Stack<>();
+
+for(int i=1; i<=k; i++){
+int temp = q.remove();
+s.push(temp);
+}
+
+for(int i=1; i<=k; i++){
+int temp = s.pop();
+q.add(temp);
+}
+
+for(int i=1; i<=n-k; i++){
+int temp = q.remove();
+q.add(temp);
+}
+}
+
+TC : O(k)+O(k)+O(n-k) = O(n+k) =O(n)
+SC : O(k)

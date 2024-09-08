@@ -53,3 +53,8 @@ Sequencing:
    - midOfLinkedList.txt
    - floyedCycle.txt
 16.Stack
+   - removeAdjacentDuplicates
+   - validParentheses
+   - minStack
+17.Queue
+   - reverseFirstKEle.txt
