@@ -58,3 +58,4 @@ Sequencing:
    - minStack
 17.Queue
    - reverseFirstKEle.txt
+   - implementQueueUsingStack.txt
