@@ -1,0 +1,44 @@
+Ques: Generate kth palindrome number in series using digits 1 and 2 only
+
+Note : Only consider even digit number.
+
+k=5 : 11 22 1111 1221 2112       kth number : 2112
+
+// Idea1 : Keep generating numbers using 1 and 2, check for even palindrome length and return kth one.
+
+// Idea2 : insert same number at end
+                                             ____
+                                   |                   |
+           2 digit num             11                 22
+                              |         |         |         |
+           4 digit num       1111      2112      1221      2222
+
+           //Problem with this is it don't give number in sequence
+
+         : insert same number at middle
+                                             ____
+                                   |                   |
+           2 digit num             11                 22
+                              |         |         |         |
+           4 digit num       1111      1221      2112      2222
+
+
+Pseudocode :
+
+String kthNUmber (int k){
+   Queue<String> q = new LinkedList()<>;
+   q.add("1");
+   q.add("2");
+   String ans = "";
+
+   for(int i = 1; i<=k; i++){
+      String temp = q.remove();
+      ans = temp;
+
+      string left = temp.subString(0, temp.length/2);
+      string right = temp.subString(temp.length/2, temp.length);
+      q.add(left + "11" + right)
+      q.add(left + "22" + right)
+   }
+   return ans;
+}

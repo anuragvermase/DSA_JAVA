@@ -1,0 +1,28 @@
+Ques : Implement Queue using Stacks
+
+operation : 5 4 9 rem rem 8 10 rem rem 14 rem
+
+// idea 1 : add efficient
+
+add(x) : O(1)
+ add x in s1       {s1: stack1, s2: stack2}
+
+remove() : O(n)
+ 1. move n-1 elements to s2.
+ 2. now get the last element of s1.
+ 3. move all elements from s2 back to s1.
+
+space complexity : O(1) // no new space will be used
+
+
+// idea 2 : remove efficient
+operation : 5 4 9 rem rem 8 10 rem rem 14 rem
+
+add(x) : O(n)
+ 1. move all element s1 -> s2.
+ 2. add x to s1.
+ 3. put back elements s2 -> s1.
+
+remove() : O(1)
+ remove the top of s1.
+
