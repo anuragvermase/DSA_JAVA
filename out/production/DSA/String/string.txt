@@ -1,5 +1,7 @@
 Character can be lowercase, uppercase, special characters etc.
 
+"String is immutable in java."
+
 Characters :
 
 Alphabet
