@@ -1,0 +1,88 @@
+Example in which we store the data in hierarchical fashion
+
+1.
+- Family tree
+        Grand Father & Grand Mother
+                     |
+        Son1        Son2        Son3
+                     |
+                you     Sister/
+                        Brother
+
+- It is Hierarchical Data Structure, not a Linear Data Structure
+
+2.
+- Org Structure  {Organisation}
+                     CEO
+                      |
+              CTO     COO    CFO
+               |
+          VP1     VP2
+           |
+        M1   M2                                 {M : manager}
+        |
+ SDE1  SDE2  SDE3
+   |
+ Intern
+
+______________________________________________________________________________________
+// Tree
+Naming convention
+
+                                         | Root |     {or, root node}         level 0
+         edges ->              |             |               |
+         nodes ->              x             y               c                level 1
+                           |      |          |           |        |
+                           n4    n5         n6           n7       a           level 2
+                                          |    |               |      |
+                                          q    p               b      g       level 3
+                                          |                    |      |
+                                          r                    i      k       level 4
+                                                               |    |   |
+                                                               h    l   m     level 5
+                                                                    |
+                                                                    u
+
+-> Parent <-> child : 'a' is parent of 'b', 'b' is child of 'a'
+
+-> Ancestors : All the nodes in the path from root node to that node {ancestors of b are a c root}
+
+-> Descendants : All the nodes below the given node. {descendants of 'a' are b i h g k l m }
+
+-> Leaf Nodes : Nodes without children {h l m are leaf node}
+
+-> Siblings : Nodes with same parent {b g are sibling, x y c are siblings}
+
+____________________________________________________
+Property of tree :
+1. we will have only 1 root node.
+2. for every node, there can be only 1 parent
+3. cycle not allowed.
+
+_____________________________________________________
+Height (Node) :
+Length of longest path from node to any of its descendant leaf nodes.
+
+height (g) : 2
+height (y) : 3
+height (a) : 4
+
+Observations 1:
+Height (leaf node) : 0
+
+Observations 2:
+Height(node) : max(Height of child nodes) + 1
+
+___________________________________________________
+
+Depth(Node) :
+Length of path from given node to root node.
+
+Depth(g) : 3
+Depth(h) : 5
+
+Observation 1:
+Depth(root node) : 0
+
+Observation 2:
+Depth(node) : depth(parent node) + 1
