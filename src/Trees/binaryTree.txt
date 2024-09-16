@@ -1,0 +1,70 @@
+Binary Tree : Every node can have at max 2 child nodes.
+
+                 14
+             |         |
+           18           19
+         |     |          |
+         7     3           8
+              |
+             10
+______________________________________
+Creating a Class :
+
+Class Node{
+    int val;
+    Node left;
+    Node right;
+
+    Node (int x){
+       val=x
+    }
+}
+_______________________________________
+Objects :
+Node n1 = new Node(10);
+_____________
+val = 10
+left = null         <= n1 (#a1 : system provide the name)
+right = null
+_____________
+
+Node n2 = new Node(20);
+_____________
+val = 20
+left = null         <= n2 (#a2 : system provide the name)
+right = null
+_____________
+
+Node n3 = new Node(30);
+_____________
+val = 30
+left = null         <= n3 (#a3 : system provide the name)
+right = null
+_____________
+________________________________________
+
+Now if,
+n1.left = n2
+n1.right = n3
+
+then,
+Node n1 = new Node(10);
+_____________
+val = 10
+left = #a2         <= n1 (#a1 : system provide the name)
+right = #a3
+_____________
+
+             10
+          |      |
+         20      30
+
+so if,
+print(n1.left.val) -> 20
+_______________________________________
+
+=> Don't worry about tree construction.
+   -> solve the problem for constructed tree
+   -> you have given already constructed tree
+
+

@@ -29,7 +29,7 @@ ________________________________________________________________________________
 // Tree
 Naming convention
 
-                                         | Root |     {or, root node}         level 0
+                                         | Root |                             level 0     {or, root node}
          edges ->              |             |               |
          nodes ->              x             y               c                level 1
                            |      |          |           |        |
@@ -86,3 +86,5 @@ Depth(root node) : 0
 
 Observation 2:
 Depth(node) : depth(parent node) + 1
+
+_________________________________________________
